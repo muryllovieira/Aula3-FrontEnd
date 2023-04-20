@@ -1,18 +1,19 @@
 'use strict'
 
 import{produtos} from "./produtos.js"
+import "./main.js"
 
 const criarCard = (produto) => {
-    const card = document.createElement('div')
+    const card = document.createElement('card-mumu')
     card.classList.add('card')
     
     const foto = document.createElement('img')
     foto.classList.add('card__image')
-    foto.src = `./img/${produto.image}`
+    card.foto = `./img/${produto.image}`
 
     const titulo = document.createElement('h5')
     titulo.classList.add('card__title')
-    titulo.textContent = produto.nome
+    card.titulo = produto.nome
 
     const descricao = document.createElement('p')
     descricao.classList.add('card__description')
